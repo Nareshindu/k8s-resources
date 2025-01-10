@@ -1,0 +1,7 @@
+version: v1
+kind: Namespace
+metadata:
+  name: expense
+labels: 
+  stage: dev
+spec:  
