@@ -19,14 +19,18 @@ spec:
       limits:
         cpu: 80m
         memory: 100Mi
-    env:
-    - name: course
-      valueFrom:
-        configMapKeyRef:
-          name: naresh-config
-          key: course
-    - name: status
-      valueFrom:
-        configMapKeyRef:
-          name: naresh-config
-          key: status       
+    varFrom:
+    - configMapRef:
+      name: naresh-config
+
+    # env:
+    # - name: course
+    #   valueFrom:
+    #     configMapKeyRef:
+    #       name: naresh-config
+    #       key: course
+    # - name: status
+    #   valueFrom:
+    #     configMapKeyRef:
+    #       name: naresh-config
+    #       key: status       
