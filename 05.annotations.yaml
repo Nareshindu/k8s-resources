@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: naresh1
+  annotations:
+    imageregistry: "https://hub.docker.com/"
+spec:
+  containers:
+    name: postgres
+    image: postgres
+    ports:
+    - containerPort: 5432    
