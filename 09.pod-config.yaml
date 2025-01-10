@@ -21,7 +21,7 @@ spec:
         memory: 100Mi
     envFrom:
     - configMapRef:
-      name: naresh-config
+        name: naresh-config
 
     # env:
     # - name: course
