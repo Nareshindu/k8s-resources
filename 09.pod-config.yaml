@@ -24,9 +24,9 @@ spec:
       valueFrom:
         configMapKeyRef:
           name: naresh-config
-          value: course
+          key: course
     - name: status
       valueFrom:
         configMapKeyRef:
           name: naresh-config
-          value: status       
+          key: status       
