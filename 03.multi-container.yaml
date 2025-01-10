@@ -1,3 +1,21 @@
+# apiVersion: v1
+# kind: Pod
+# metadata:
+#   name: expense2
+#   labels:
+#     stage: dev
+#     project: expense
+# spec:
+#   containers:
+#   - name: nginx
+#     image: nginx
+#     ports:
+#     - containerPort: 80
+#   - name: postgres
+#     image: naresh34/postgres:v1
+#     ports:
+#     - containerPort: 5432    
+
 apiVersion: v1
 kind: Pod
 metadata:
@@ -7,11 +25,12 @@ metadata:
     project: expense
 spec:
   containers:
+  - name: postgres
+    image: naresh34/postgres:v1
+    ports:
+    - containerPort: 5432 
   - name: nginx
     image: nginx
     ports:
     - containerPort: 80
-  - name: postgres
-    image: naresh34/postgres:v1
-    ports:
-    - containerPort: 5432    
+  
