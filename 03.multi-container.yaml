@@ -6,7 +6,7 @@ metadata:
     stage: dev
     project: expense
 spec:
-  contaners:
+  containers:
   - name: nginx
     image: nginx
     ports:
