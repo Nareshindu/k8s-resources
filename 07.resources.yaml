@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: nareshnidu1
+  name: nareshnaidu1
   labels:
     name: naresh
     status: learning
@@ -16,7 +16,7 @@ spec:
     resources:
       requests:
         cpu: "60m"
-        memory: "60mi"
+        memory: "60Mi"
       limits:
         cpu: "100m"
-        memory: "100mi"  
+        memory: "100Mi"  
