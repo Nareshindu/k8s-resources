@@ -3,7 +3,7 @@ kind: Namespace
 metadata:
   name: expense
   labels: 
-  stage: dev
+   stage: dev
 spec:  
 
 
