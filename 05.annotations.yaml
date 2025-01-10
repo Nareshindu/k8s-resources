@@ -6,7 +6,23 @@ metadata:
     imageregistry: "https://hub.docker.com/"
 spec:
   containers:
-    name: postgres
-    image: postgres
+  - name: postgres
+    image: naresh34/postgres:v1
     ports:
     - containerPort: 5432    
+
+
+#     apiVersion: v1
+# kind: Pod
+# metadata:
+#   name: nginx
+#   labels:
+#     stage: dev
+#     author: naresh
+# spec:
+#   containers:
+#   - name: nginx
+#     image: nginx
+#     ports:
+#     - containerPort: 80
+#   # - name: nginx
