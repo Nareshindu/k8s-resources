@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: expense1
+  Namespace: expense
   labels:
     stage: dev
     project: expense
