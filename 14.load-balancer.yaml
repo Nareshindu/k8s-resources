@@ -9,7 +9,7 @@ spec:
     project: expense
     module: frontend
   ports:
-    name: naresh-svc-3
+  - name: naresh-svc-3
     protocol: TCP
     port: 80
     targetPort: 80
