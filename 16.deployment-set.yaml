@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx
+        image: naresh34/frontend:v1
         ports:
         - containerPort: 80
 ---
