@@ -46,4 +46,4 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: naresh34/frontend:V1
+        image: naresh34/frontend:v1
