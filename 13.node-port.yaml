@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: naresh-service2
+spec:
+  type: NodePort
+  selector:
+    env: dev
+    project: expense
+    module: frontend
+  ports:
+  - name: naresh-svc-2
+    protocol: TCP
+    port: 80
+    targetPort: 80
