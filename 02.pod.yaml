@@ -9,7 +9,7 @@ metadata:
     module: frontend
 spec:
   containers:
-  - name: naresh34/backend:v1
+  - name: naresh-pod1
     image: naresh34/backend:v1
     ports: 
     - containerPort: 80      
