@@ -4,8 +4,9 @@ metadata:
   name: expense1
   Namespace: expense
   labels:
-    stage: dev
+    env: dev
     project: expense
+    module: frontend
 spec:
   containers:
   - name: nginx
