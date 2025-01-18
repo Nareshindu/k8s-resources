@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: naresh-service3
+spec:
+  type: LoadBalancer
+  selector:
+    env: dev
+    project: expense
+    module: frontend
+  ports:
+    name: naresh-svc-3
+    protocol: TCP
+    port: 80
+    targetPort: 80
