@@ -30,6 +30,7 @@ metadata:
 spec:
   selector:
     tier: frontend
+  ports:  
   - name: nginx
     protocol: TCP
     port: 80
