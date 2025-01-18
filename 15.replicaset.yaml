@@ -1,48 +1,24 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: nginx
+  name: naresh-frontend
   labels:
     app: nginx
     tier: frontend
 spec:
   # modify replicas according to your case
-  replicas: 3
+  replicas: 2
+  # these labels are used to select pod and create replicas
   selector:
     matchLabels:
       tier: frontend
-
-
-apiVersion: v1
-kind: Pod
-metadata:
-  labels:
-    tier: frontend
-spec:
-    containers:
-    - name: nginx
-      image: naresh34/frontend:v1
-
-
-# apiVersion: apps/v1
-# kind: ReplicaSet
-# metadata:
-#   name: frontend
-#   labels:
-#     app: nginx
-#     tier: frontend
-# spec:
-#   # modify replicas according to your case
-#   replicas: 3
-#   # these labels are used to select pod and create replicas
-#   selector:
-#     matchLabels:
-#       tier: frontend
-#   template:
-#     metadata:
-#       labels:
-#         tier: frontend
-#     spec:
-#       containers:
-#       - name: nginx
-#         image: naresh34/frontend:v1
+  template:
+    metadata:
+      labels:
+        tier: frontend
+    spec:
+      containers:
+      - name: nginx
+        image: naresh34/frontend:v1
+        ports:
+        - containerPort: 80
