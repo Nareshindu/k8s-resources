@@ -12,14 +12,14 @@ spec:
     matchLabels:
       tier: frontend
 
-      
-  apiVersion: v1
-  kind: Pod
-  metadata:
-    name: naresh-nginx
-    labels:
-      tier: frontend
-  spec:
-      containers:
-      - name: nginx
-        image: naresh34/frontend:v1
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: naresh-nginx
+  labels:
+    tier: frontend
+spec:
+    containers:
+    - name: nginx
+      image: naresh34/frontend:v1
