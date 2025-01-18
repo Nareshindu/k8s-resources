@@ -22,3 +22,18 @@ spec:
         image: naresh34/frontend:v1
         ports:
         - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: naresh-service-cluster
+  labels:
+    tier: frontned
+spec:
+  selector:
+    tier: frontend
+  - name: nginx
+    protocol: TCP
+    port: 80
+    targetPort: 80
+    NodePort: 32333        
