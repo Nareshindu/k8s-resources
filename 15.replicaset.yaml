@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: nginx
+  labels:
+    app: nginx
+    tier: frontend
+spec:
+  # modify replicas according to your case
+  replicas: 3
+  selector:
+    matchLabels:
+      tier: frontend
+  ---
+  apiVersion: v1
+  kind: Pod
+  metadata:
+    name: naresh-nginx
+    labels:
+      tier: frontend
+  spec:
+      containers:
+      - name: nginx
+        image: naresh34/frontend:v1
