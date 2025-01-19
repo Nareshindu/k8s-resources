@@ -23,7 +23,7 @@ metadata:
      stage: dev
      project: expense   
 spec:
-  StorageClassName: ""
+  storageClassName: ""
   volumeName: ebs-pv
   accessModes:
   - ReadWriteOnce
