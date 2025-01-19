@@ -26,7 +26,7 @@ spec:
   StorageClassName: ""
   volumeName: ebs-pv
   accessModes:
-  - ReadWriteOnly
+  - ReadWriteOnce
   resources:
     requests:
       storage: 2Gi           
