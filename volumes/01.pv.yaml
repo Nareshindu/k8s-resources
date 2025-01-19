@@ -24,7 +24,7 @@ metadata:
      project: expense   
 spec:
   StorageClassName: ""
-  volumename: ebs-pv
+  volumeName: ebs-pv
   accessModes:
   - ReadWriteOnly
   resources:
