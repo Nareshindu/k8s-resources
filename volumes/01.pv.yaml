@@ -41,7 +41,7 @@ spec:
   - name: frontend
     image: naresh34/frontend:v1 
     volumeMounts:
-    - name: ebs-pv
+    - name: ebs-pvc
       mountPath: /usr/share/nginx/html
   volumes:
   - name: data
