@@ -41,10 +41,10 @@ spec:
   - name: frontend
     image: naresh34/frontend:v1 
     volumeMounts:
-    - name: ebs-pvc
+    - name: ebs-pv
       mountPath: /usr/share/nginx/html
   volumes:
-  - name: data
+  - name: ebs-pv
     persistentVolumeClaim:
       claimName: ebs-pvc   
 ---
