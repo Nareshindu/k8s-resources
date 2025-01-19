@@ -40,7 +40,7 @@ spec:
   containers:
   - name: frontend
     image: naresh34/frontend:v1 
-    volumeDevices:
+    volumeMounts:
     - name: ebs-pv
       mountPath: /usr/share/nginx/html
   volumes:
