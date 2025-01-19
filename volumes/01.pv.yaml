@@ -14,19 +14,19 @@ spec:
     driver: ebs.csi.aws.com
     fsType: ext4
     volumeHandle: vol-0a3554a587bc68ffa
----
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: ebs-pvc
-  labels: 
-     stage: dev
-     project: expense   
-spec:
-  storageClassName: ""
-  volumeName: ebs-pv
-  accessModes:
-  - ReadWriteOnce
-  resources:
-    requests:
-      storage: 3Gi           
+# ---
+# apiVersion: v1
+# kind: PersistentVolumeClaim
+# metadata:
+#   name: ebs-pvc
+#   labels: 
+#      stage: dev
+#      project: expense   
+# spec:
+#   storageClassName: ""
+#   volumeName: ebs-pv
+#   accessModes:
+#   - ReadWriteOnce
+#   resources:
+#     requests:
+#       storage: 3Gi           
