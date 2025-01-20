@@ -5,7 +5,8 @@ metadata:
 spec:
   accessModes:
   - ReadWriteOnce
-  StorageClassName: naresh-sc
+  storageClassName: naresh-sc
+  resources:
     requests:
       storage: 2Gi
 # ---
