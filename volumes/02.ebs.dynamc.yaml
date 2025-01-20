@@ -5,16 +5,3 @@ metadata:
 provisioner: ebs.csi.aws.com
 reclaimPolicy : Retain
 volumeBindingMode:  WaitForFirstConsumer
----
-apiVerson: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: naresh-pvc
-spec:
-  accessModes:
-  - ReadWriteOnce
-  StorageClassName: naresh-sc
-  resources:
-    requests:
-      storage: 2Gi
----
