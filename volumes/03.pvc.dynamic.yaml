@@ -38,7 +38,7 @@ metadata:
     env: dev
 spec:    
   type: LoadBalancer
-  selector: 
+  selector:
     env: dev
   ports:
   - name: lb-pod
