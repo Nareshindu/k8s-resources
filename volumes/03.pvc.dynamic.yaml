@@ -9,11 +9,40 @@ spec:
   resources:
     requests:
       storage: 2Gi
-# ---
-# apiVersion: v1
-# kind: pod
-# metadata:
-#   name: naresh-pod
-#   labesl: 
-#     env: dev
-# spec:
+---
+apiVersion: v1
+kind: pod
+metadata:
+  name: naresh-pod
+  labesl: 
+    env: dev
+spec:
+  nodeSelector:
+    topology.kubernetes.io/zone=us-east-1f
+  containers:
+  - name: naresh-con
+    image: naresh34/frontend:v1
+    volumeMounts:
+    - name: claim
+      mountPath: /usr/share/nginx/html
+  volumes:
+  - name: claim
+    persistentVolumeClaim:
+      claimName: naresh-pvc    
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-lb
+  labels:
+    env: dev
+spec:    
+  type: LoadBalancer
+  selector: 
+    env: dev
+  ports:
+  - name: lb-pod
+    protocol: TCP
+    port: 80
+    tagretPort: 80
+    nodePort: 32000
