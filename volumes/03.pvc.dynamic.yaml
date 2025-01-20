@@ -4,7 +4,7 @@ metadata:
   name: naresh-pvc
 spec:
   accessModes:
-  - ReadWriteOnce
+    - ReadWriteOnce
   StorageClassName: naresh-sc
     requests:
       storage: 2Gi
