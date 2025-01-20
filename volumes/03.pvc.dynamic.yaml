@@ -18,7 +18,7 @@ metadata:
     env: dev
 spec:
   nodeSelector:
-    topology.kubernetes.io/zone=us-east-1f
+    topology.kubernetes.io/zone: us-east-1f
   containers:
   - name: naresh-con
     image: naresh34/frontend:v1
