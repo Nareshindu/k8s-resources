@@ -11,7 +11,7 @@ spec:
       storage: 2Gi
 ---
 apiVersion: v1
-kind: pod
+kind: Pod
 metadata:
   name: naresh-pod
   labesl: 
@@ -44,5 +44,5 @@ spec:
   - name: lb-pod
     protocol: TCP
     port: 80
-    tagretPort: 80
+    targetPort: 80
     nodePort: 32000
