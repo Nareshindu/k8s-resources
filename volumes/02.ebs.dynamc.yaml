@@ -1,0 +1,6 @@
+apiVersion:
+kind: StorageClass
+metadata:
+  name: naresh-sc
+provisioner: ebs.csi.aws.com
+volumeBindingMode:  WaitForFirstConsumer
