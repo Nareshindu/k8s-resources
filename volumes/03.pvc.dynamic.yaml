@@ -1,11 +1,11 @@
-apiVerson: v1
+apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: naresh-pvc
 spec:
   accessModes:
   - ReadWriteOnce
-  storageClassName: naresh-sc
+  StorageClassName: naresh-sc
     requests:
       storage: 2Gi
 # ---
