@@ -30,7 +30,7 @@ spec:
       storage: 1Gi
   volumeName: naresh-pv
   accessModes:
-  - ReadWWriteMany
+  - ReadWriteMany
   storageClassName: ""
 ---
 apiVersion: v1
