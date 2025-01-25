@@ -12,10 +12,10 @@ spec:
   - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
   volumeMode: Filesystem
-  storageClassName: ""
+  storageClassName: ""  # Empty for no StorageClass
   csi:
     driver: efs.csi.aws.com
-    volumeHandle: fs-0e5992ad2e4f4ee2f # volume-id
+    volumeHandle: fs-0e5992ad2e4f4ee2f  # volume-id
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -25,13 +25,13 @@ metadata:
     project: expense
     env: dev   
 spec:
+  accessModes:
+  - ReadWriteMany
   resources:
     requests: 
       storage: 1Gi
   volumeName: naresh-pv
-  accessModes:
-  - ReadWriteMany
-  storageClassName: ""
+  storageClassName: ""  # Empty for no StorageClass
 ---
 apiVersion: v1
 kind: Pod
@@ -42,11 +42,11 @@ metadata:
     env: dev
 spec:
   containers:
-  - name: naresh-data
+  - name: naresh-pod
     image: naresh34/frontend:v1
     volumeMounts: 
-    name: naresh-data
-    - mountPath: /usr/share/nginx/html
+    - name: naresh-data
+      mountPath: /usr/share/nginx/html
   volumes:
   - name: naresh-data
     persistentVolumeClaim:
@@ -59,11 +59,10 @@ metadata:
 spec:
   selector:
     project: expense
-    env: dev
   type: NodePort
   ports:
   - name: naresh-service
     protocol: TCP
     port: 80
     targetPort: 80
-    nodePort: 32003            
+    nodePort: 32003
