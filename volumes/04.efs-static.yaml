@@ -11,7 +11,7 @@ spec:
   accessModes:
   - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
-  volumeMode: filesystem
+  volumeMode: Filesystem
   storageClassName: ""
   csi:
     driver: efs.csi.aws.com
@@ -59,6 +59,7 @@ metadata:
 spec:
   selector:
     project: expense
+    env: dev
   type: NodePort
   ports:
   - name: naresh-service
