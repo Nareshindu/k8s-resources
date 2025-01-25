@@ -57,11 +57,12 @@ kind: Service
 metadata:
   name: naresh-service
 spec:
+  type: LoadBalancer
   selector:
     projectname: naresh-personel
     env: dev
   ports:
-  - name: opening port
+  - name: naresh-service1
     protocol: TCP
     port: 80
     targetPort: 80
