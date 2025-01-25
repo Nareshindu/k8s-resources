@@ -7,7 +7,7 @@ metadata:
     env: dev
 spec:
   accessModes:
-  - ReadWriteOnce
+  - ReadWriteMany
   resources:
     requests:
       storage: 2Gi
@@ -26,11 +26,11 @@ spec:
     image: naresh34/frontend:v1
     volumeMounts:
     - name: naresh-data
-      devicePath: /usr/share/nginx/html
+      mountPath: /usr/share/nginx/html
   volumes:
     - name: naresh-data
-      persistentVolumeClaimPolicy:
-      - name: naresh-pvc
+      persistentVolumeClaim:
+      - claimPolicy: naresh-pvc
 ---
 apiVersion: v1
 kind: Service
@@ -42,7 +42,7 @@ spec:
     project: expense
     env: dev
   ports:
-  - name: naresh-service
+  - name: naresh service
     protocol: TCP
     port: 80
     targetPort: 80
