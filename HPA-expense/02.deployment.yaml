@@ -34,8 +34,6 @@ metadata:
   labels:
     app: naresh
 spec:
-  selector:
-    app: naresh
   ports:
   - name: naresh
   protocol: TCP
