@@ -49,7 +49,7 @@ spec:
     - mountPath: /usr/share/nginx/html
   volumes:
   - name: naresh-data
-    persistentVolumeClaimPolicy:
+    persistentVolumeClaim:
       claimName: naresh-pvc
 ---
 apiVersion: v1
