@@ -30,7 +30,7 @@ spec:
   volumes:
     - name: naresh-data
       persistentVolumeClaim:
-      - claimPolicy: naresh-pvc
+        claimPolicy: naresh-pvc
 ---
 apiVersion: v1
 kind: Service
