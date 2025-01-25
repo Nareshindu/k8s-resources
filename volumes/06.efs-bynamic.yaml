@@ -42,7 +42,7 @@ spec:
     project: expense
     env: dev
   ports:
-  - name: naresh service
+  - name: naresh-service
     protocol: TCP
     port: 80
     targetPort: 80
