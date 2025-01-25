@@ -36,10 +36,10 @@ metadata:
 spec:
   ports:
   - name: naresh
-  protocol: TCP
-  port: 80
-  containerPort: 80
-  nodePort: 32001
+    protocol: TCP
+    port: 80
+    containerPort: 80
+    nodePort: 32001
 ---
 apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
