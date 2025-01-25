@@ -44,7 +44,7 @@ spec:
   containers:
   - name: naresh-data
     image: naresh34/frontend:v1
-    volumeMount: 
+    volumeMounts: 
     name: naresh-data
     - mountPath: /usr/share/nginx/html
   volumes:
