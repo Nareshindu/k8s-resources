@@ -42,7 +42,7 @@ metadata:
     env: dev
 spec:
   containers:
-  - name: naresh-pod
+  - name: naresh-data
     image: naresh34/frontend:v1
     volumeMount: 
     name: naresh-data
