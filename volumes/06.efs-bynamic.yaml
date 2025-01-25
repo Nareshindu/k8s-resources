@@ -1,0 +1,49 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: naresh-pvc
+  labels:
+    name: project
+    env: dev
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 2Gi
+  storageClassName: naresh-sc
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: naresh-pod
+  labels:
+    project: expense
+    env: dev
+spec:
+  containers:
+  - name: naresh-pod1
+    image: naresh34/frontend:v1
+    volumeMounts:
+    - name: naresh-data
+      devicePath: /usr/share/nginx/html
+  volumes:
+    - name: naresh-data
+      persistentVolumeClaimPolicy:
+      - name: naresh-pvc
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: naresh-service        
+spec:
+  type: LoadBalancer
+  selector:
+    project: expense
+    env: dev
+  ports:
+  - name: naresh-service
+    protocol: TCP
+    port: 80
+    targetPort: 80
+    nodePort: 32005    

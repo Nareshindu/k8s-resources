@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: StorageClass
+metadata: 
+    name: naresh-sc
+    labels:
+      env: dev
+      project: expense
+provisioner: efs.csi.aws.com
+parameters:
+    provisioningMode: efs-ap
+    fileSystemId: fs-ID
+    directoryPerms: 700
+    basePath: /naresh-expense
