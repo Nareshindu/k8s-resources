@@ -30,10 +30,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: naresh-service
-  labels:
-    app: naresh
+  name: naresh-service   
 spec:
+  selector: 
+    app: naresh
   ports:
   - name: naresh
     protocol: TCP
