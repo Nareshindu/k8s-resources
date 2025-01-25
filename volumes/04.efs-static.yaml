@@ -43,7 +43,7 @@ metadata:
 spec:
   containers:
   - name: naresh-pod
-    image: naresh34/frontend:v1
+    image: naresh34/tomcat:v1
     volumeMounts: 
     - name: naresh-data
       mountPath: /usr/share/nginx/html
