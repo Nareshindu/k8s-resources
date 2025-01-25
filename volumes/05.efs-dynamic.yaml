@@ -11,3 +11,4 @@ parameters:
     fileSystemId: "fs-08ff8bb32f9f642ab"
     directoryPerms: "700"
     basePath: "/naresh-expense"
+reclaimPolicy: Retain    
