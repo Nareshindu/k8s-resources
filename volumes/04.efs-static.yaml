@@ -9,7 +9,7 @@ spec:
   capacity:
     storage: 2Gi
   accessModes:
-  - ReadWriteOnce
+  - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
   volumeMode: filesystem
   StorageClassName: ""
@@ -30,7 +30,7 @@ spec:
       storage: 1Gi
   volumeName: naresh-pv
   accessModes:
-  - ReadWWriteOnly
+  - ReadWWriteMany
   storageClassName: ""
 ---
 apiVersion: v1
