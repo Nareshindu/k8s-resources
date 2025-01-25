@@ -8,6 +8,6 @@ metadata:
 provisioner: efs.csi.aws.com
 parameters:
     provisioningMode: efs-ap
-    fileSystemId: fs-08ff8bb32f9f642ab
+    fileSystemId: "fs-08ff8bb32f9f642ab"
     directoryPerms: 700
     basePath: /naresh-expense
