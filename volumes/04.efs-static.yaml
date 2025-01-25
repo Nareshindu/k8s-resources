@@ -12,7 +12,7 @@ spec:
   - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
   volumeMode: filesystem
-  StorageClassName: ""
+  storageClassName: ""
   csi:
     driver: efs.csi.aws.com
     volumeHandle: fs-0e5992ad2e4f4ee2f # volume-id
